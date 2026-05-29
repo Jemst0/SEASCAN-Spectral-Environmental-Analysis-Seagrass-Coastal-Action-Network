@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coastal Classifier - Sample Upload</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2kG6g6w3m0P2f0pQn6Qm0s6b1GZqGkNf2A6rK1M=" crossorigin=""/>
+</head>
+<body>
+  <h2>Coastal Classifier - Upload ZIP or Folder of TIFFs</h2>
+
+  <p>Select a ZIP file containing the band TIFFs, or select a folder (drag/drop supported in some browsers):</p>
+
+  <label>Upload ZIP file: <input id="zipInput" type="file" accept=".zip" /></label>
+  <br/><br/>
+  <label>Select folder (choose folder in file dialog): <input id="folderInput" type="file" webkitdirectory directory multiple /></label>
+  <br/><br/>
+  <button id="submitBtn">Upload & Predict</button>
+
+  <h3>Result</h3>
+  <div id="result">
+    <p id="status">No result yet.</p>
+    <div id="map" style="max-width:90%;height:480px;display:none;border:1px solid #ccc;border-radius:8px;overflow:hidden;"></div>
+    <img id="outImg" style="max-width:90%;height:auto;display:none;" alt="classified overlay" />
+    <pre id="metrics" style="background:#f6f6f6;padding:8px;display:none;"></pre>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1j8k2Hj0sQb7r3u1w1pQ7m0s6b1GZqGkNf2A6rK1M=" crossorigin=""></script>
+  <script src="main.js"></script>
+</body>
+</html>

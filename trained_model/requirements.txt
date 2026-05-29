@@ -1,0 +1,13 @@
+matplotlib
+reportlab
+tifffile
+rasterio
+scipy
+torch
+numpy
+Pillow
+fastapi
+uvicorn
+pydantic
+python-multipart
+pyjwt
